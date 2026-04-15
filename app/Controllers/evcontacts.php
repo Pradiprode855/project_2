@@ -6,10 +6,16 @@ class Evcontacts extends ResourceController
 {
     public function conpage()
     {
-        return view('contactpage');
-    }
+        $db = \Config\Database::connect();
+        try {
+            $db->query('SELECT 1');
+            echo "✅ Database connected successfully!";
+        } catch (\Exception $e) {
+            echo "❌ Connection failed: " . $e->getMessage();
+        }
 
-    public function contact()
+    }
+   public function contact()
     {
         $name = $this->request->getPost('name');
         $email = $this->request->getPost('email');
@@ -18,6 +24,8 @@ class Evcontacts extends ResourceController
         // echo $message1;
         // $data1 = $this->request->getJSON(true);
         $db = \Config\Database::connect();
+         
+
         $builder = $db->table('contacts');
         $message2 ="Please Enter Inforamtion";
         $data = [

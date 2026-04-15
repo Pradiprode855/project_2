@@ -30,13 +30,13 @@
 # DATABASE
 #--------------------------------------------------------------------
 
-database.default.hostname = localhost
-database.default.database = ev_contact_data
-database.default.username = root
-database.default.password = 
+database.default.hostname = mysql.gb.stackcp.com
+database.default.database = datanoxai_db-35313137d9ae
+database.default.username = datanoxai_db-35313137d9ae
+database.default.password = ravi123123
 database.default.DBDriver = MySQLi
 database.default.DBPrefix =
-database.default.port = 3306
+database.default.port = 40160
 
 # If you use MySQLi as tests, first update the values of Config\Database::$tests.
 # database.tests.hostname = localhost
