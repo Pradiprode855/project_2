@@ -49,9 +49,9 @@ class Admin extends ResourceController
 
     public function contact()
     {
-       $db = Database::connect();
-       $name = $this->request->getGet('name'); 
-       $email = $this->request->getGet('email');
+       $db = Database::connect()
+       $name = $this->request->getGet('name')
+       $email = $this->request->getGet('email')
        $subject = $this->request->getGet('subject');
        $message = $this->request->getGet('message');
          try {
